@@ -6,4 +6,9 @@
     <string name="explore_button_label">Explore</string>
     <string name="publish_a_snap">Publish a snap</string>
     <string name="publish_button_label">Publish</string>
+    <string name="title_activity_snap_list">SnapListActivity</string>
+    <string name="snap_image_content_description">Snap image</string>
+    <string name="report_this_snap_button_text">report button</string>
+    <string name="snap_info_sample">10 miles away</string>
+    <string name="snap_action_comment_info_sample">35k</string>
 </resources>

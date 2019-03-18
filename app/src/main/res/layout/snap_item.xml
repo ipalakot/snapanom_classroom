@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/snap_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/snap_image_content_description"
+            android:src="@drawable/img_golf" />
+
+        <ImageView
+            android:id="@+id/snap_report_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/snap_image"
+            android:layout_alignEnd="@+id/snap_image"
+            android:layout_alignRight="@+id/snap_image"
+            android:clickable="true"
+            android:contentDescription="@string/report_this_snap_button_text"
+            android:focusable="true"
+            android:padding="@dimen/padding_10"
+            android:src="@drawable/action_report" />
+
+        <TextView
+            android:id="@+id/snap_info"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/snap_image"
+            android:padding="8dp"
+            android:text="@string/snap_info_sample"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:fontFamily="@font/rocko" />
+
+        <LinearLayout
+            android:id="@+id/snap_stats"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/snap_image"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:textColor="?android:textColorSecondary">
+
+            <Button
+                android:id="@+id/snap_action_comment"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/action_comment"
+                android:text="@string/snap_action_comment_info_sample"
+                app:fontFamily="@font/rocko" />
+
+            <Button
+                android:id="@+id/snap_action_love"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/action_love"
+                android:text="@string/snap_action_comment_info_sample"
+                app:fontFamily="@font/rocko" />
+
+            <Button
+                android:id="@+id/snap_action_like"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/action_like"
+                android:text="@string/snap_action_comment_info_sample"
+                app:fontFamily="@font/rocko" />
+
+            <Button
+                android:id="@+id/snap_action_dislike"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/action_dislike"
+                android:text="@string/snap_action_comment_info_sample"
+                app:fontFamily="@font/rocko" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
