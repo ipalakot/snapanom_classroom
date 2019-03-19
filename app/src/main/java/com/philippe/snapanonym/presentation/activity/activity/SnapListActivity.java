@@ -64,7 +64,7 @@ public class SnapListActivity extends AppCompatActivity implements LoaderManager
     private void initData() {
         mSpinner.setVisibility(View.VISIBLE);
 
-        getSupportLoaderManager().initLoader(0, null, (android.support.v4.app.LoaderManager.LoaderCallbacks<Object>) this);
+        getSupportLoaderManager().initLoader(0, null,  this);
         //getSupportLoaderManager().initLoader(0, null, this);
     }
 

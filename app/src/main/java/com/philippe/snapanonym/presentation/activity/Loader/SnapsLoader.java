@@ -53,6 +53,6 @@ public class SnapsLoader extends AsyncTaskLoader<List<Snap>> {
             snap.setPicture(picture);
             snaps.add(snap);
         }
-        return snaps;
-    }
+        //return snaps;
+        return networkUtils.getSnaps    }
 }
