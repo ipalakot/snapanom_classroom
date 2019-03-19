@@ -54,5 +54,6 @@ public class SnapsLoader extends AsyncTaskLoader<List<Snap>> {
             snaps.add(snap);
         }
         //return snaps;
-        return networkUtils.getSnaps    }
+        return networkUtils.getSnaps();
+    }
 }
