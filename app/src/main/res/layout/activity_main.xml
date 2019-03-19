@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_snap_anonym"
     android:fitsSystemWindows="true"
-    tools:context=".presentation.activity.MainActivity">
+    tools:context=".presentation.activity.activity.MainActivity">
 
     <TextView
         android:id="@+id/textView_app_title"

@@ -10,19 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".presentation.activity.SnapListActivity"
+            android:name=".presentation.activity.activity.SnapListActivity"
             android:label="@string/title_activity_snap_list"
-            android:parentActivityName=".presentation.activity.MainActivity"
+            android:parentActivityName=".presentation.activity.activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".presentation.activity.MainActivity" />
+                android:value=".presentation.activity.activity.MainActivity" />
 
 
         </activity>
 
         <activity
-            android:name=".presentation.activity.MainActivity"
+            android:name=".presentation.activity.activity.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
