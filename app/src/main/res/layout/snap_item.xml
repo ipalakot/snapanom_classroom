@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,9 +24,9 @@
             android:layout_alignEnd="@+id/snap_image"
             android:layout_alignRight="@+id/snap_image"
             android:clickable="true"
-            android:contentDescription="@string/report_this_snap_button_text"
+
             android:focusable="true"
-            android:padding="@dimen/padding_10"
+            android:padding="10dp"
             android:src="@drawable/action_report" />
 
         <TextView
@@ -40,7 +40,8 @@
             android:textColor="@android:color/white"
             android:textStyle="bold"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            app:fontFamily="@font/rocko" />
+            app:fontFamily="@font/rocko"
+            android:drawableTop="@drawable/action_report"/>
 
         <LinearLayout
             android:id="@+id/snap_stats"
@@ -58,9 +59,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                app:fontFamily="@font/rocko"
                 android:drawableTop="@drawable/action_comment"
-                android:text="@string/snap_action_comment_info_sample"
-                app:fontFamily="@font/rocko" />
+                android:text="@string/snap_action_comment_info_sample" />
 
             <Button
                 android:id="@+id/snap_action_love"
@@ -68,9 +69,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/action_love"
-                android:text="@string/snap_action_comment_info_sample"
-                app:fontFamily="@font/rocko" />
+                android:drawableTop="@drawable/action_like"
+                app:fontFamily="@font/rocko"
+                android:text="@string/snap_action_comment_info_sample" />
 
             <Button
                 android:id="@+id/snap_action_like"
@@ -79,8 +80,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/action_like"
-                android:text="@string/snap_action_comment_info_sample"
-                app:fontFamily="@font/rocko" />
+                app:fontFamily="@font/rocko"
+                android:text="@string/snap_action_comment_info_sample" />
 
             <Button
                 android:id="@+id/snap_action_dislike"
@@ -89,8 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/action_dislike"
-                android:text="@string/snap_action_comment_info_sample"
-                app:fontFamily="@font/rocko" />
+                app:fontFamily="@font/rocko"
+                android:text="@string/snap_action_comment_info_sample" />
 
 
         </LinearLayout>
@@ -98,4 +99,4 @@
     </RelativeLayout>
 
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

@@ -1,12 +1,14 @@
 package com.philippe.snapanonym.presentation.activity.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 
 import com.philippe.snapanonym.R;
-import com.philippe.snapanonym.presentation.activity.activity.SnapListActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
