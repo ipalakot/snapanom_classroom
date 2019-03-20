@@ -71,9 +71,7 @@ public class SnapListActivity extends AppCompatActivity implements LoaderManager
     @NonNull
     @Override
     public Loader<List<Snap>> onCreateLoader(int id, @Nullable Bundle args) {
-
-
-        return new SnapsLoader(this);
+        return new SnapsLoader(this, nCurrentLocation, nScope);
     }
 
     @Override

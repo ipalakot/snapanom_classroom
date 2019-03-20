@@ -1,4 +1,4 @@
-package com.philippe.snapanonym;
+package com.philippe.snapanonym.infrastructure;
 
 import android.content.Context;
 import android.location.Location;
@@ -17,15 +17,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class NetworkUtils {
 
     private static final String LOG_TAG = NetworkUtils.class.getSimpleName();
 
     // Base URL for snaps API.
     private static final String SNAP_BASE_URL = "http://ec2-54-174-75-230.compute-1.amazonaws.com:9000?";
-
-
-
     // Parameter for coordinate longitude.
     private static final String LONGITUDE = "longitude";
     // Parameter for coordinate latitude.
@@ -35,26 +33,20 @@ public class NetworkUtils {
     private final ConnectivityManager mConnectivityManager;
 
     private Context mContext;
+
     private NetworkInfo networkInfo;
 
-    public NetworkUtils(Context context) {
-        this.mContext = context;
-        mConnectivityManager = (ConnectivityManager)
-                mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
-    }
-
-
-
-    public static List<Snap> getSnaps() {
+    public static List<Snap> getSnaps(Location location, Double scope) {
         //TODO Build the request and IMPLEMENT THIS
         List<Snap> snaps = new ArrayList<>();
         HttpURLConnection urlConnection = null;
+
         try {
 
             Uri builtUri = Uri.parse(SNAP_BASE_URL).buildUpon()
-                    .appendQueryParameter(LONGITUDE, String.valueOf(42.33335254))
-                    .appendQueryParameter(LATITUDE, String.valueOf(2.33333))
-                    .appendQueryParameter(DISTANCE, String.valueOf(30))
+                    .appendQueryParameter(LONGITUDE, String.valueOf(location.getLongitude()))
+                    .appendQueryParameter(LATITUDE, String.valueOf(location.getLatitude()))
+                    .appendQueryParameter(DISTANCE, String.valueOf(distance))
                     .build();
             URL requestUrl = new URL(builtUri.toString());
             urlConnection = (HttpURLConnection) requestUrl.openConnection();
@@ -81,8 +73,11 @@ public class NetworkUtils {
 
         }
 
+
         return snaps;
     }
 
-
+    public interface OnNetworkListener {
+        void networkStatus(boolean networkEnabled);
+    }
 }

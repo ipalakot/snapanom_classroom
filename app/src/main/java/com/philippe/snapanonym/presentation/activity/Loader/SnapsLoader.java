@@ -12,6 +12,7 @@ import android.util.Base64;
 import com.philippe.snapanonym.R;
 import com.philippe.snapanonym.model.Picture;
 import com.philippe.snapanonym.model.Snap;
+import com.philippe.snapanonym.infrastructure.NetworkUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -54,6 +55,6 @@ public class SnapsLoader extends AsyncTaskLoader<List<Snap>> {
             snaps.add(snap);
         }
         //return snaps;
-        return networkUtils.getSnaps();
+        return NetworkUtils.getSnaps(nCurrentLocation, nScope);
     }
 }
